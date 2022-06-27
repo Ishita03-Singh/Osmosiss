@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sharp_rect_01"
+    android:backgroundTint="@color/white"
+    android:layout_margin="8dp"
+    android:paddingBottom="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<LinearLayout
+    android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintTop_toTopOf="parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/profileIV"
+            android:layout_width="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            android:backgroundTint="#bdbdbd"
+           android:background="@drawable/sharp_circle"
+            android:src="@drawable/user"/>
+        <TextView
+            android:id="@+id/NameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/profileIV"
+            android:textColor="#212121"
+            android:text="Full Name"
+            />
+        <TextView
+            android:id="@+id/descriptionTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/profileIV"
+            android:layout_below="@id/NameTV"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="40dp"
+            android:maxLength="35"
+             android:textColor="#bdbdbd"
+            android:text="description A|| description B|"
+            />
+        <TextView
+            android:id="@+id/TimeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/profileIV"
+            android:layout_below="@id/descriptionTV"
+            android:textColor="#bdbdbd"
+            android:text="6h"
+            />
+        <ImageView
+            android:id="@+id/ContentIV"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/TimeTV"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/sharp_rect_01" />
+        <TextView
+            android:id="@+id/ContentTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/profileIV"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:layout_below="@id/ContentIV"
+            android:textColor="#424242"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy..."
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout"
+        android:layout_width="70dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <ImageView
+            android:id="@+id/moreOtionsIV"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_baseline_more_vert_24"/>
+
+        <ImageView
+                android:id="@+id/LikeIV"
+            android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:src="@drawable/like_black"/>
+
+        <ImageView
+            android:id="@+id/CommentIV"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:src="@drawable/comment"/>
+
+        <ImageView
+            android:id="@+id/ShareIV"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/send"/>
+        <ImageView
+            android:id="@+id/SaveIV"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_height="25dp"
+            android:src="@drawable/save_black"/>
+
+    </LinearLayout>
+</LinearLayout>
+    <TextView
+        android:id="@+id/ReactionsTV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       app:layout_constraintTop_toBottomOf="@id/ll"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:textColor="#616161"
+        android:textSize="12sp"
+        android:text="XYZ and 11 others"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
